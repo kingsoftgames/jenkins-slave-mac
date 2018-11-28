@@ -6,6 +6,7 @@ readonly BREW_PKG_LIST=(
   tree
   jq
   coreutils
+  ifstat
 )
 
 readonly BREW_PKGS=$(IFS=' '; echo "${BREW_PKG_LIST[*]}")
