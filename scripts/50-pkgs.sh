@@ -7,6 +7,7 @@ readonly BREW_PKG_LIST=(
   jq
   coreutils
   ifstat
+  watch
 )
 
 readonly BREW_PKGS=$(IFS=' '; echo "${BREW_PKG_LIST[*]}")
