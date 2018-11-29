@@ -10,7 +10,9 @@ export LSCOLORS=exfxaxdxcxegedabagacad
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# Add pip3's user base binary directory to PATH
+# Add pip's user base binary directory to PATH
+# Note that python3 takes precedence over python2
+export PATH="$(python2 -m site --user-base)/bin:$PATH"
 export PATH="$(python3 -m site --user-base)/bin:$PATH"
 
 # sets environment for Java
