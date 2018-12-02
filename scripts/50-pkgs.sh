@@ -8,6 +8,7 @@ readonly BREW_PKG_LIST=(
   coreutils
   ifstat
   watch
+  smartmontools
 )
 
 readonly BREW_PKGS=$(IFS=' '; echo "${BREW_PKG_LIST[*]}")
