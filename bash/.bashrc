@@ -1,3 +1,7 @@
+function idpt_prepend_path {
+  local readonly dir="$1"
+  echo "$PATH" | grep -q "$dir" || export PATH="$dir:$PATH"
+}
 
 # Customize bash prompt
 export PS1='\u@\h:\w\$ '
@@ -10,15 +14,22 @@ export LSCOLORS=exfxaxdxcxegedabagacad
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# Add /usr/local/bin to PATH if not already there
+# This is because /usr/local/bin is missing in the default PATH of sshd on macOS
+# Use the following command to see default PATH of sshd:
+#   strings /usr/sbin/sshd | grep /usr/bin
+# See also: https://git-annex.branchable.com/forum/OSX__39__s_default_sshd_behaviour_has_limited_paths_set/
+idpt_prepend_path "/usr/local/bin"
+
 # Add pip's user base binary directory to PATH
 # Note that python3 takes precedence over python2
-export PATH="$(python2 -m site --user-base)/bin:$PATH"
-export PATH="$(python3 -m site --user-base)/bin:$PATH"
+idpt_prepend_path "$(/usr/local/bin/python2 -m site --user-base)/bin"
+idpt_prepend_path "$(/usr/local/bin/python3 -m site --user-base)/bin"
 
 # sets environment for Java
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Load aliases
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+  . ~/.bash_aliases
 fi
