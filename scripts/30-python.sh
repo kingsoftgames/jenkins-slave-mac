@@ -17,7 +17,7 @@ function install_python {
   # Downloaded from https://www.python.org/downloads/
   local readonly download_url="https://s3.intranet.rog2.org/software/python/${version}/${pkg_name}"
 
-  curl -o "$dest_pkg_path" "$download_url" --location --silent --fail --show-error
+  /usr/bin/curl -o "$dest_pkg_path" "$download_url" --location --silent --fail --show-error
   install_pkg "$dest_pkg_path"
 }
 
@@ -29,8 +29,8 @@ function upgrade_pip {
 function run {
   install_python "$PYTHON2_VERSION"
   install_python "$PYTHON3_VERSION"
-  upgrade_pip python2
-  upgrade_pip python3
+  upgrade_pip /usr/local/bin/python2
+  upgrade_pip /usr/local/bin/python3
 }
 
 run

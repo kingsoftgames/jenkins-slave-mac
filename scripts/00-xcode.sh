@@ -1,3 +1,3 @@
 #!/bin/bash
 
-xcode-select --install
+/usr/bin/xcode-select --install

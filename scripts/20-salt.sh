@@ -18,7 +18,7 @@ function install_salt {
   # Documentations at https://docs.saltstack.com/en/latest/topics/installation/osx.html
   local readonly download_url="https://s3.intranet.rog2.org/software/salt/${pkg_name}"
 
-  curl -o "$dest_pkg_path" "$download_url" --location --silent --fail --show-error
+  /usr/bin/curl -o "$dest_pkg_path" "$download_url" --location --silent --fail --show-error
   install_pkg "$dest_pkg_path"
 }
 
@@ -34,7 +34,7 @@ export PATH="/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 exec /opt/salt/bin/salt-minion \$@
 EOF
 
-  sudo salt-config --master "$master" --minion-id "$minion_id"
+  sudo /usr/local/sbin/salt-config --master "$master" --minion-id "$minion_id"
 }
 
 function run {

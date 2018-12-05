@@ -14,7 +14,7 @@ function install_pkg {
 function download_java8 {
   local readonly url=$1
   local readonly dest_path=$2
-  curl -o "$dest_path" "$url" --location --silent --fail --show-error
+  /usr/bin/curl -o "$dest_path" "$url" --location --silent --fail --show-error
 }
 
 function mount_dmg {
