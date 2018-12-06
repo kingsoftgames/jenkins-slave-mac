@@ -15,5 +15,6 @@ readonly BREW_PKGS=$(IFS=' '; echo "${BREW_PKG_LIST[*]}")
 
 /usr/local/bin/brew install $BREW_PKGS
 
-# crudini is not Python3 compatible, so we must install with pip2
-/usr/local/bin/python2 -m pip install --user crudini
+# Install crudini globally
+# Note: crudini is not Python3 compatible, so we must install with pip2
+sudo -H /usr/local/bin/python2 -m pip install crudini
