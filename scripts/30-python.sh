@@ -21,16 +21,9 @@ function install_python {
   install_pkg "$dest_pkg_path"
 }
 
-function upgrade_pip {
-  local readonly python_binary=$1
-  $python_binary -m pip install --upgrade --user pip
-}
-
 function run {
   install_python "$PYTHON2_VERSION"
   install_python "$PYTHON3_VERSION"
-  upgrade_pip /usr/local/bin/python2
-  upgrade_pip /usr/local/bin/python3
 }
 
 run
