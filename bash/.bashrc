@@ -21,10 +21,10 @@ export LANG=en_US.UTF-8
 # See also: https://git-annex.branchable.com/forum/OSX__39__s_default_sshd_behaviour_has_limited_paths_set/
 idpt_prepend_path "/usr/local/bin"
 
-# Add pip's user base binary directory to PATH
+# Add Python's system bin directory to PATH
 # Note that python3 takes precedence over python2
-idpt_prepend_path "$(/usr/local/bin/python2 -m site --user-base)/bin"
-idpt_prepend_path "$(/usr/local/bin/python3 -m site --user-base)/bin"
+idpt_prepend_path "$(/usr/local/bin/python2-config --prefix)/bin"
+idpt_prepend_path "$(/usr/local/bin/python3-config --prefix)/bin"
 
 # sets environment for Java
 export JAVA_HOME=$(/usr/libexec/java_home)
