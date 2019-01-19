@@ -3,8 +3,8 @@
 set -e
 
 # Downloaded from https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-readonly JAVA8_URL="https://s3.intranet.rog2.org/software/java/8/jdk-8u191-macosx-x64.dmg"
-readonly JAVA8_PKG_NAME="JDK 8 Update 191.pkg"
+readonly JAVA8_URL="https://s3.intranet.rog2.org/software/java/8/jdk-8u201-macosx-x64.dmg"
+readonly JAVA8_PKG_NAME="JDK 8 Update 201.pkg"
 
 function install_pkg {
   local readonly pkg_path=$1
