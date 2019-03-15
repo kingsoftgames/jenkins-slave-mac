@@ -2,7 +2,7 @@
 
 set -e
 
-readonly SALT_VERSION="2018.3.3"
+readonly SALT_VERSION="2018.3.4"
 readonly SALT_MASTER="salt.intranet.rog2.org"
 
 function install_pkg {
