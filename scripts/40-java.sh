@@ -2,9 +2,9 @@
 
 set -e
 
-# Downloaded from https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-readonly JAVA8_URL="https://s3.intranet.rog2.org/software/java/8/jdk-8u201-macosx-x64.dmg"
-readonly JAVA8_PKG_NAME="JDK 8 Update 201.pkg"
+# Downloaded from https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html
+readonly JAVA8_VERSION="8.212.04.1"
+readonly JAVA8_URL="https://s3.intranet.rog2.org/software/java/amazon-corretto/8/amazon-corretto-${JAVA8_VERSION}-macosx-x64.pkg"
 
 function install_pkg {
   local readonly pkg_path=$1
@@ -30,13 +30,10 @@ function unmount_dmg {
 
 function run {
   local readonly url="$JAVA8_URL"
-  local readonly dest_path="/tmp/$(basename $url)"
+  local readonly pkg_path="/tmp/$(basename $url)"
 
-  download_java8 "$url" "$dest_path"
-  local readonly mount_point=$(mount_dmg "$dest_path")
-  local readonly pkg_path="$mount_point/$JAVA8_PKG_NAME"
+  download_java8 "$url" "$pkg_path"
   install_pkg "$pkg_path"
-  unmount_dmg "$mount_point"
 }
 
 run
