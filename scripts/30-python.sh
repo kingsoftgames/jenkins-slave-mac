@@ -3,7 +3,7 @@
 set -e
 
 readonly PYTHON2_VERSION="2.7.15"
-readonly PYTHON3_VERSION="3.6.7"
+readonly PYTHON3_VERSION="3.6.8"
 
 function install_pkg {
   local readonly pkg_path=$1
