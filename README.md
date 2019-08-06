@@ -48,6 +48,13 @@ Add the following to `/etc/hosts`:
 
     127.0.0.1       [hostname]
 
+### Screen Locked Message
+
+Go to **System Preferences** -> **Security & Privacy** -> **General**.
+
+- Enable `Show a message when the screen is locked`
+- Click `Set Lock Message` -> [hostname]
+
 ### Network
 
 Go to **System Preferences** -> **Network**.
