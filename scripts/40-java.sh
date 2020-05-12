@@ -4,7 +4,7 @@ set -e
 
 # Downloaded from https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html
 readonly JAVA8_VERSION="8.252.09.1"
-readonly JAVA8_URL="https://s3.intranet.rog2.org/software/java/amazon-corretto/${JAVA8_VERSION}/amazon-corretto-${JAVA8_VERSION}-macosx-x64.pkg"
+readonly JAVA8_URL="https://s3.shiyou.kingsoft.com/software/java/amazon-corretto/${JAVA8_VERSION}/amazon-corretto-${JAVA8_VERSION}-macosx-x64.pkg"
 
 function install_pkg {
   local readonly pkg_path=$1

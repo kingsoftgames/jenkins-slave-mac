@@ -15,7 +15,7 @@ function install_python {
   local readonly pkg_name="python-${version}-macosx10.9.pkg"
   local readonly dest_pkg_path="/tmp/${pkg_name}"
   # Downloaded from https://www.python.org/downloads/
-  local readonly download_url="https://s3.intranet.rog2.org/software/python/${version}/${pkg_name}"
+  local readonly download_url="https://s3.shiyou.kingsoft.com/software/python/${version}/${pkg_name}"
 
   /usr/bin/curl -o "$dest_pkg_path" "$download_url" --location --silent --fail --show-error
   install_pkg "$dest_pkg_path"
