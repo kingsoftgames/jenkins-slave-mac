@@ -16,7 +16,7 @@ function install_salt {
   local readonly dest_pkg_path="/tmp/${pkg_name}"
   # Downloaded from https://repo.saltstack.com/#osx
   # Documentations at https://docs.saltstack.com/en/latest/topics/installation/osx.html
-  local readonly download_url="https://s3.intranet.rog2.org/software/salt/${pkg_name}"
+  local readonly download_url="https://s3.shiyou.kingsoft.com/software/salt/${pkg_name}"
 
   /usr/bin/curl -o "$dest_pkg_path" "$download_url" --location --silent --fail --show-error
   install_pkg "$dest_pkg_path"
