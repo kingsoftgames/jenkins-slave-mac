@@ -3,7 +3,10 @@
 set -e
 
 readonly DDC_ENDPOINT="ddc.shiyou.kingsoft.com/ddc"
-readonly MOUNT_POINT="/mnt/ddc"
+
+# For macOS 10.15 Catalina
+# https://www.fkylewright.com/2019/10/macos-catalina-10-15-autofs-mount-point-changes/
+readonly MOUNT_POINT="/System/Volumes/Data/ddc"
 
 function idpt_append {
   local readonly line="$1"
