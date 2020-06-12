@@ -2,7 +2,7 @@
 
 set -e
 
-readonly DDC_ENDPOINT="ddc.intranet.rog2.org/ddc"
+readonly DDC_ENDPOINT="ddc.shiyou.kingsoft.com/ddc"
 readonly MOUNT_POINT="/mnt/ddc"
 
 function idpt_append {
