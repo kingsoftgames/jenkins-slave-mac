@@ -2,7 +2,7 @@
 
 set -e
 
-readonly SALT_VERSION="2018.3.4"
+readonly SALT_VERSION="2019.2.5"
 readonly SALT_MASTER="salt.shiyou.kingsoft.com"
 
 function install_pkg {
