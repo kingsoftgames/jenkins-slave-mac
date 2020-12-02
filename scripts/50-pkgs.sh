@@ -9,6 +9,7 @@ readonly BREW_PKG_LIST=(
   ifstat
   watch
   smartmontools
+  subversion
 )
 
 readonly BREW_PKGS=$(IFS=' '; echo "${BREW_PKG_LIST[*]}")
